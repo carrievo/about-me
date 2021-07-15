@@ -1,10 +1,23 @@
 * {
-    background-color: yellow;
+    background-color: lightgoldenrodyellow;
 }
 
-h1 {
-    font-size: 6em
-    font-family: 'Franklin Gothic Medium', 'Arial narrow',
-    Arial, sans-serif;
+h1{
+  color: purple;
+  font-size: 60px;
+  text-shadow: 1px 1px 1px rgb(255, 0, 255);
+}
 
+body{
+  margin: 50px;
+  padding: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+
+/*main tag rules*/
+main{
+  width: 960px;
+  margin: 30px auto;
+  min-height: 700px;
 }
