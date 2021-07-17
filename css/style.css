@@ -2,10 +2,21 @@
     background-color: lightgoldenrodyellow;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 h1{
   color: purple;
   font-size: 60px;
   text-shadow: 1px 1px 1px rgb(255, 0, 255);
+}
+
+/*main tag rules*/
+main{
+  width: 960px;
+  margin: 30px auto;
+  min-height: 700px;
 }
 
 body{
@@ -15,9 +26,10 @@ body{
   
 }
 
-/*main tag rules*/
-main{
-  width: 960px;
-  margin: 30px auto;
-  min-height: 700px;
+/*an ID uses the number /# sign*/
+#headshot{
+  height: 380px;
+  width: 35%;
+  margin-left: 0px;
+
 }

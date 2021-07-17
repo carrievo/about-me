@@ -8,6 +8,7 @@ alert('Hi ' + username + '. Lets play a guessing game!');
 // ask question 1
 let answerOne = prompt('Are you ready? Answer \'yes\' or \'no\'').toLowerCase();
 
+
 console.log('user entered to question 1: ' + answerOne);
 
 // check if the answer is correct:
@@ -21,6 +22,7 @@ if (answerOne === 'yes' || answerOne === 'y') {
 
 // ask question 2
 let answerTwo = prompt('Can you guess what state I used to live in?').toLowerCase();
+l
 
 console.log('user entered to question 2: ' + answerTwo);
 
@@ -35,6 +37,7 @@ if (answerTwo === 'yes' || answerTwo === 'y') {
 
 // ask question 3
 let answerThree = prompt('Can you guess where I live now?').toLowerCase();
+let userScore = 0;
 
 console.log('user entered to question 3: ' + answerThree);
 
@@ -63,14 +66,87 @@ if (answerFour === 'yes' || answerFour === 'y') {
 
 // ask question 5
 let answerFive = prompt('Lastly, are you enjoying this guessing game?').toLowerCase();
+let userScore = 0;
 
 console.log('user entered to question 5: ' + answerFive);
 
 // check if the answer is correct:
 if (answerFive === 'yes' || answerFive === 'y') {
-  alert('Yay! Me too, thanks for playing! You may now enter my site..');
+  alert('Yay! Me too, let\'s continue!');
 } else if (answerFive === 'no' || answerFive === 'n') {
-  alert('Rude. However, I\'ll be nice and let you enter my site. Go on now..');
+  alert('Maybe if we keep playing, it\'ll change your mind.');
 } else {
   alert('Sorry, answers need to be yes or no.')
 }
+
+// ask question 6
+
+let myDogNumber = 5;
+let userResponse = +prompt('Can you guess how many dogs I\'ve had in my lifetime? HINT: It is less than 8. You have 4 tries to guess, go!');
+
+let attemptsRemaining = 3;
+let attempts = 3;
+
+while (attemptsRemaining) {
+  for (let i = 0; i < attempts; i++){
+    console.log(`i: ${i}`);
+    console.log(`attemptsRemaining: ${attemptsRemaining}`);
+    if (userResponse === myDogNumber){
+      attemptsRemaining = 0;
+      alert(`Woo hoo! You're right!`);
+      break;
+    } 
+    else if (userResponse < myDogNumber){
+      
+      alert(`Too low, guess again! You have ${attemptsRemaining} attempts remaining.`);
+      userResponse = +prompt(`Try another number.`);
+    }  
+    else if (userResponse > myDogNumber){
+      
+      userResponse = +prompt(`Try another number.`);
+      alert(`Too high, guess again! You have ${attemptsRemaining} attempts remaining.`);
+      
+    }
+    attemptsRemaining--;
+    if (attemptsRemaining === 0){
+      alert('Sorry, wrong answer. The correct answer is ' + myDogNumber + '. Better luck next time!');
+    } 
+    else if (userResponse === myDogNumber){
+      alert(`Woo hoo! You're right!`);
+    }
+  }
+}
+
+// ask question 7
+
+let answerCountries = 17;
+let attempts = 6;
+
+for (let i = 1; i < attempts; i + 1) {
+    let answerAmount = +prompt ('Can you guess how many countries I\'ve been to? Hint: It\'s between 10 to 20'); {
+        console.log (`Guess of countries: ${answerCountries}`)
+
+  } if (answerAmount === answerCountries) {
+      alert ('Yay, you got it!');
+      break;
+
+  } else if (answerAmount < answerCountries) {
+    attempts--;
+      alert (`You are too low! You have have ${attempts} guesses left`);
+      
+  } else if (answerAmount > answerCountries){
+    attempts--;  
+    alert (`You are too high! You have ${attempts} guesses left`);
+    
+  }
+    attemptsRemaining--;
+    if (attemptsRemaining === 0){
+      alert('The correct answer is ' + 17);
+      }
+    }
+
+// Tell the user how many answers they got correct
+
+
+
+
