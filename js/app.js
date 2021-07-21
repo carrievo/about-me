@@ -77,23 +77,26 @@ questionThree();
 
 
 // ask question 4
-let answerFour = prompt('Am I a cat person?').toLowerCase();
+function questionFour(){
+  let answerFour = prompt('Am I a cat person?').toLowerCase();
 
-console.log('user entered to question 4: ' + answerFour);
+  console.log('user entered to question 4: ' + answerFour);
 
-// check if the answer is correct:
-// if answer is incorrect
-if (answerFour === 'yes' || answerFour === 'y') {
-  alert('Sorry, wrong answer. Cats are adorable but they kind of scare me. I\'m a huge dog person!');
+  // check if the answer is correct:
+  // if answer is incorrect
+  if (answerFour === 'yes' || answerFour === 'y') {
+    alert('Sorry, wrong answer. Cats are adorable but they kind of scare me. I\'m a huge dog person!');
   // if answer is correct
-} else if (answerFour === 'no' || answerFour === 'n') {
-  alert('You\'re right! I love dogs and have 2 very cute ones!');
+  } else if (answerFour === 'no' || answerFour === 'n') {
+    alert('You\'re right! I love dogs and have 2 very cute ones!');
     // adds 20 to score
     correctAnswerCount++;
   // if user answers anything other than y/n
-} else {
-  alert('Sorry, answers need to be yes or no.');
+  } else {
+    alert('Sorry, answers need to be yes or no.');
+  }
 }
+questionFour();
 
 // ask question 5
 let answerFive = prompt('Lastly, are you enjoying this guessing game?').toLowerCase();
