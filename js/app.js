@@ -164,49 +164,51 @@ function questionSix() {
 questionSix();
 
 // ask question 7
+function questionSeven(){
 
-// arrays of correct answers
-let listOfAnswers = ['purple', 'yellow', 'gray', 'gold']
+  // arrays of correct answers
+  let listOfAnswers = ['purple', 'yellow', 'gray', 'gold']
 
-// sets attempts to 6 for next question
-attempts = 6
+  // sets attempts to 6 for next question
+  attempts = 6
 
-while (attempts) {
+  while (attempts) {
   // prompts question and gives possible answers
-  let answer = prompt(`What is one of my favorite colors? \nHint: Remember, I'm from Minnesota ;) \nYou've got 6 guesses. Good luck!`);
+    let answer = prompt(`What is one of my favorite colors? \nHint: Remember, I'm from Minnesota ;) \nYou've got 6 guesses. Good luck!`);
 
-  // logs answer to console
-  console.log(`answer = ${answer}`);
+    // logs answer to console
+    console.log(`answer = ${answer}`);
 
-  // subtracts 1 from attempts
-  attempts--;
+    // subtracts 1 from attempts
+    attempts--;
 
-  let correct = false;
-  
-  // loops through correct answers to see if answer is correct
-  for (let i = 0; i < listOfAnswers.length; i++) {
-    if (answer.toLowerCase() === listOfAnswers[i]) {
-      alert(`You got it, ${listOfAnswers[i]} is the best color!`);
-      // sets correct to true to break while loop
-      correct = true;
+    let correct = false;
+
+    // loops through correct answers to see if answer is correct
+    for (let i = 0; i < listOfAnswers.length; i++) {
+      if (answer.toLowerCase() === listOfAnswers[i]) {
+        alert(`You got it, ${listOfAnswers[i]} is the best color!`);
+        // sets correct to true to break while loop
+        correct = true;
+        break;
+      } else {
+        continue;
+      }
+    }
+    if (correct == true){
+    // increments correctAnswerCount by 1
+      correctAnswerCount++;
+      // sets attempts to 0 to break while loop
       break;
     } else {
-      continue;
+      alert(`That\'s incorrect. You have ${attempts} attempts left.`);
     }
   }
-  if (correct == true){
-    // increments correctAnswerCount by 1
-    correctAnswerCount++;
-    // sets attempts to 0 to break while loop
-    break;
-  } else {
-    alert(`That\'s incorrect. You have ${attempts} attempts left.`);
-  }
-}
-  
-// Tell the user how many answers they got correct
+  questionSeven();
 
-// calculate score
+  // Tell the user how many answers they got correct
+
+  // calculate score
 
 let score = correctAnswerCount / 7
 score = Math.round(score * 100)
@@ -214,6 +216,7 @@ score = Math.round(score * 100)
 // evauates and then alerts the score to the user
 if (correctAnswerCount) {
   alert(`Thanks for playing ${username}! \n You scored ${score}%. \n You may now enter my site.`)
+}
 }
 
 
