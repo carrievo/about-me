@@ -10,23 +10,26 @@ let correctAnswerCount = 0;
 alert('Hi ' + username + '. Lets play a guessing game!');
 
 // ask question 1
-let answerOne = prompt('Are you ready? Answer \'yes\' or \'no\'').toLowerCase();
+function questionOne(){
+  let answerOne = prompt('Are you ready? Answer \'yes\' or \'no\'').toLowerCase();
 
-console.log('user entered to question 1: ' + answerOne);
+  console.log('user entered to question 1: ' + answerOne);
 
-// check if the answer is correct:
-// if the answer is correct
-if (answerOne === 'yes' || answerOne === 'y') {
-  alert('Perfect, let\'s start!');
+  // check if the answer is correct:
+  // if the answer is correct
+  if (answerOne === 'yes' || answerOne === 'y') {
+    alert('Perfect, let\'s start!');
     // adds 20 to score
     correctAnswerCount++;
   // if answer is incorrect
-} else if (answerOne === 'no' || answerOne === 'n') {
-  alert('Aw come on now, you got this!');
+  } else if (answerOne === 'no' || answerOne === 'n') {
+    alert('Aw come on now, you got this!');
   // if user answers with anything other than y/n
-} else {
-  alert('Sorry, answers need to be yes or no.');
+  } else {
+    alert('Sorry, answers need to be yes or no.');
+  }
 }
+questionOne();
 
 // ask question 2
 let answerTwo = prompt('Am I from Minnesota?').toLowerCase();
