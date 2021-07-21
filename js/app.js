@@ -99,23 +99,26 @@ function questionFour(){
 questionFour();
 
 // ask question 5
-let answerFive = prompt('Lastly, are you enjoying this guessing game?').toLowerCase();
+function questionFive() {
+  let answerFive = prompt('Lastly, are you enjoying this guessing game?').toLowerCase();
 
-console.log('user entered to question 5: ' + answerFive);
+  console.log('user entered to question 5: ' + answerFive);
 
-// check if the answer is correct:
-// if answer is correct
-if (answerFive === 'yes' || answerFive === 'y') {
-  alert('Yay! Me too, let\'s continue!');
+  // check if the answer is correct:
+  // if answer is correct
+  if (answerFive === 'yes' || answerFive === 'y') {
+    alert('Yay! Me too, let\'s continue!');
     // adds 20 to score
     correctAnswerCount++;
   // if answer is incorrect
-} else if (answerFive === 'no' || answerFive === 'n') {
-  alert('Maybe if we keep playing, it\'ll change your mind.');
+  } else if (answerFive === 'no' || answerFive === 'n') {
+    alert('Maybe if we keep playing, it\'ll change your mind.');
   // if user answers anything other than y/n
-} else {
-  alert('Sorry, answers need to be yes or no.');
+  } else {
+    alert('Sorry, answers need to be yes or no.');
+  }
 }
+questionFive();
 
 // ask question 6
 
