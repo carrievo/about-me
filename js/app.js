@@ -122,43 +122,46 @@ questionFive();
 
 // ask question 6
 
-let myDogNumber = 5;
-let userResponse = +prompt('Can you guess how many dogs I\'ve had in my lifetime? \nHINT: It is less than 8. You have 4 tries to guess. \nReady? Set. Go!');
+function questionSix() {
+  let myDogNumber = 5;
+  let userResponse = +prompt('Can you guess how many dogs I\'ve had in my lifetime? \nHINT: It is less than 8. You have 4 tries to guess. \nReady? Set. Go!');
 
-let attemptsRemaining = 3;
-let attempts = 3;
+  let attemptsRemaining = 3;
+  let attempts = 3;
 
-while (attemptsRemaining) {
-  for (let i = 0; i < attempts; i++){
-    console.log(`i: ${i}`);
-    console.log(`attemptsRemaining: ${attemptsRemaining}`);
-    if (userResponse === myDogNumber){
-      attemptsRemaining = 0;
-      alert(`Woo hoo! You're right!`);
-      correctAnswerCount++;
-      break;
-    } 
-    else if (userResponse < myDogNumber){
+  while (attemptsRemaining) {
+    for (let i = 0; i < attempts; i++){
+      console.log(`i: ${i}`);
+      console.log(`attemptsRemaining: ${attemptsRemaining}`);
+      if (userResponse === myDogNumber){
+        attemptsRemaining = 0;
+        alert(`Woo hoo! You're right!`);
+        correctAnswerCount++;
+        break;
+      }
+      else if (userResponse < myDogNumber){
 
-      userResponse = +prompt(`Try another number.`);
-      alert(`Too low, guess again! You have ${attemptsRemaining} attempts remaining.`);
-      
-    }  
-    else if (userResponse > myDogNumber){
-      
-      userResponse = +prompt(`Try another number.`);
-      alert(`Too high, guess again! You have ${attemptsRemaining} attempts remaining.`);
-      
-    }
-    attemptsRemaining--;
-    if (attemptsRemaining === 0){
-      alert('Sorry, wrong answer. The correct answer is ' + myDogNumber + '. Better luck next time!');
-    } 
-    else if (userResponse === myDogNumber){
-      alert(`Woo hoo! You're right!`);
+        userResponse = +prompt(`Try another number.`);
+        alert(`Too low, guess again! You have ${attemptsRemaining} attempts remaining.`);
+
+      }
+      else if (userResponse > myDogNumber){
+
+        userResponse = +prompt(`Try another number.`);
+        alert(`Too high, guess again! You have ${attemptsRemaining} attempts remaining.`);
+
+      }
+      attemptsRemaining--;
+      if (attemptsRemaining === 0){
+        alert('Sorry, wrong answer. The correct answer is ' + myDogNumber + '. Better luck next time!');
+      }
+      else if (userResponse === myDogNumber){
+        alert(`Woo hoo! You're right!`);
+      }
     }
   }
 }
+questionSix();
 
 // ask question 7
 
