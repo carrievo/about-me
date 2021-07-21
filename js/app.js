@@ -77,7 +77,7 @@ questionThree();
 
 
 // ask question 4
-function questionFour(){
+function questionFour() {
   let answerFour = prompt('Am I a cat person?').toLowerCase();
 
   console.log('user entered to question 4: ' + answerFour);
@@ -135,19 +135,19 @@ function questionSix() {
       console.log(`attemptsRemaining: ${attemptsRemaining}`);
       if (userResponse === myDogNumber){
         attemptsRemaining = 0;
-        alert(`Woo hoo! You're right!`);
+        alert('Woo hoo! You\'re right!');
         correctAnswerCount++;
         break;
       }
       else if (userResponse < myDogNumber){
 
-        userResponse = +prompt(`Try another number.`);
+        userResponse = +prompt('Try another number.');
         alert(`Too low, guess again! You have ${attemptsRemaining} attempts remaining.`);
 
       }
       else if (userResponse > myDogNumber){
 
-        userResponse = +prompt(`Try another number.`);
+        userResponse = +prompt('Try another number.');
         alert(`Too high, guess again! You have ${attemptsRemaining} attempts remaining.`);
 
       }
@@ -156,7 +156,7 @@ function questionSix() {
         alert('Sorry, wrong answer. The correct answer is ' + myDogNumber + '. Better luck next time!');
       }
       else if (userResponse === myDogNumber){
-        alert(`Woo hoo! You're right!`);
+        alert('Woo hoo! You\'re right!');
       }
     }
   }
@@ -170,10 +170,10 @@ function questionSeven(){
   let listOfAnswers = ['purple', 'yellow', 'gray', 'gold']
 
   // sets attempts to 6 for next question
-  attempts = 6
+  let attempts = 6
 
   while (attempts) {
-  // prompts question and gives possible answers
+    // prompts question and gives possible answers
     let answer = prompt(`What is one of my favorite colors? \nHint: Remember, I'm from Minnesota ;) \nYou've got 6 guesses. Good luck!`);
 
     // logs answer to console
@@ -196,7 +196,7 @@ function questionSeven(){
       }
     }
     if (correct == true){
-    // increments correctAnswerCount by 1
+      // increments correctAnswerCount by 1
       correctAnswerCount++;
       // sets attempts to 0 to break while loop
       break;
@@ -204,11 +204,12 @@ function questionSeven(){
       alert(`That\'s incorrect. You have ${attempts} attempts left.`);
     }
   }
-  questionSeven();
+}
+questionSeven();
 
-  // Tell the user how many answers they got correct
+// Tell the user how many answers they got correct
 
-  // calculate score
+// calculate score
 
 let score = correctAnswerCount / 7
 score = Math.round(score * 100)
@@ -217,6 +218,3 @@ score = Math.round(score * 100)
 if (correctAnswerCount) {
   alert(`Thanks for playing ${username}! \n You scored ${score}%. \n You may now enter my site.`)
 }
-}
-
-
