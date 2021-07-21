@@ -73,6 +73,7 @@ function questionThree() {
     alert('Sorry, answers need to be yes or no.');
   }
 }
+questionThree();
 
 
 // ask question 4
