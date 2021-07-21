@@ -32,42 +32,48 @@ function questionOne(){
 questionOne();
 
 // ask question 2
-let answerTwo = prompt('Am I from Minnesota?').toLowerCase();
+function questionTwo() {
+  let answerTwo = prompt('Am I from Minnesota?').toLowerCase();
 
-console.log('user entered to question 2: ' + answerTwo);
+  console.log('user entered to question 2: ' + answerTwo);
 
-// check if the answer is correct:
-// if answer is correct
-if (answerTwo === 'yes' || answerTwo === 'y') {
-  alert('Oh wow, I\'m impressed. You\'re right, I am from Minnesota!');
+  // check if the answer is correct:
+  // if answer is correct
+  if (answerTwo === 'yes' || answerTwo === 'y') {
+    alert('Oh wow, I\'m impressed. You\'re right, I am from Minnesota!');
     // adds 20 to score
     correctAnswerCount++;
   // if answer is incorrect
-} else if (answerTwo === 'no' || answerTwo === 'n') {
-  alert('I am from Minnesota! Listen for my \'O\'s\' & \'A\'s.');
+  } else if (answerTwo === 'no' || answerTwo === 'n') {
+    alert('I am from Minnesota! Listen for my \'O\'s\' & \'A\'s.');
   //if user answers anything other than y/n
-} else {
-  alert('Sorry, answers need to be yes or no.');
+  } else {
+    alert('Sorry, answers need to be yes or no.');
+  }
 }
+questionTwo();
 
 // ask question 3
-let answerThree = prompt('Do I live in California right now?').toLowerCase();
+function questionThree() {
+  let answerThree = prompt('Do I live in California right now?').toLowerCase();
 
-console.log('user entered to question 3: ' + answerThree);
+  console.log('user entered to question 3: ' + answerThree);
 
-// check if the answer is correct:
-// if answer is correct
-if (answerThree === 'yes' || answerThree === 'y') {
-  alert('Oh wow, you really know a lot about me. You\'re right!');
-  // adds 20 to score
-  correctAnswerCount++;
+  // check if the answer is correct:
+  // if answer is correct
+  if (answerThree === 'yes' || answerThree === 'y') {
+    alert('Oh wow, you really know a lot about me. You\'re right!');
+    // adds 20 to score
+    correctAnswerCount++;
   // if answer is incorrect
-} else if (answerThree === 'no' || answerThree === 'n') {
-  alert('I do live in California! The weather is a lot nicer than Minne-SNOW-ta\'s.');
+  } else if (answerThree === 'no' || answerThree === 'n') {
+    alert('I do live in California! The weather is a lot nicer than Minne-SNOW-ta\'s.');
   // if user answers anything other than y/n
-} else {
-  alert('Sorry, answers need to be yes or no.');
+  } else {
+    alert('Sorry, answers need to be yes or no.');
+  }
 }
+
 
 // ask question 4
 let answerFour = prompt('Am I a cat person?').toLowerCase();
