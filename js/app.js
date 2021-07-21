@@ -29,45 +29,45 @@ if (answerOne === 'yes' || answerOne === 'y') {
 }
 
 // ask question 2
-let answerTwo = prompt('Can you guess what state I used to live in?').toLowerCase();
+let answerTwo = prompt('Am I from Minnesota?').toLowerCase();
 
 console.log('user entered to question 2: ' + answerTwo);
 
 // check if the answer is correct:
 // if answer is correct
 if (answerTwo === 'yes' || answerTwo === 'y') {
-  alert('Oh wow, I\'m impressed. You\'re right, it\'s Minnesota!');
+  alert('Oh wow, I\'m impressed. You\'re right, I am from Minnesota!');
     // adds 20 to score
     correctAnswerCount++;
   // if answer is incorrect
 } else if (answerTwo === 'no' || answerTwo === 'n') {
-  alert('It\'s okay, I\'m from Minnesota! Listen for my \'O\'s\' & \'A\'s.');
+  alert('I am from Minnesota! Listen for my \'O\'s\' & \'A\'s.');
   //if user answers anything other than y/n
 } else {
   alert('Sorry, answers need to be yes or no.');
 }
 
 // ask question 3
-let answerThree = prompt('Can you guess where I live now?').toLowerCase();
+let answerThree = prompt('Do I live in California right now?').toLowerCase();
 
 console.log('user entered to question 3: ' + answerThree);
 
 // check if the answer is correct:
 // if answer is correct
 if (answerThree === 'yes' || answerThree === 'y') {
-  alert('Oh wow, you really know a lot about me. You\'re right, it\'s California!');
+  alert('Oh wow, you really know a lot about me. You\'re right!');
   // adds 20 to score
   correctAnswerCount++;
   // if answer is incorrect
 } else if (answerThree === 'no' || answerThree === 'n') {
-  alert('I live in California! The weather is a lot nicer than Minne-SNOW-ta\'s.');
+  alert('I do live in California! The weather is a lot nicer than Minne-SNOW-ta\'s.');
   // if user answers anything other than y/n
 } else {
   alert('Sorry, answers need to be yes or no.');
 }
 
 // ask question 4
-let answerFour = prompt('Take a guess, am I a cat person?').toLowerCase();
+let answerFour = prompt('Am I a cat person?').toLowerCase();
 
 console.log('user entered to question 4: ' + answerFour);
 
